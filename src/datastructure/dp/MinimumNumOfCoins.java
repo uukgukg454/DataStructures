@@ -1,11 +1,13 @@
 package datastructure.dp;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MinimumNumOfCoins {
     public static void main(String [] args) {
-        int []coins = {1,2,5};
-        int amount = 11;
+        int []coins =  {9,5,6,1}; //{1,2,5};
+        int amount = 10;//11;
         System.out.println("minimum no of coins required using array:"+minCoinsUsingArray(coins,amount));
         System.out.println("minimum no of coins required using 2D array:"+minCoinsUsing2DArray(coins,amount));
     }
@@ -55,6 +57,26 @@ public class MinimumNumOfCoins {
             }
         }
         int result = dpArr[coinArrLen-1][amount];
+        //System.out.println("coins used::"+coinsUsed(dpArr,coinArrLen-1, amount, coins));
         return result>=Integer.MAX_VALUE?-1:result;
+    }
+
+    //not full proof
+    static List<Integer> coinsUsed(int [][]dpArr, int m, int n, int []coins) {
+        List<Integer> result = new ArrayList<>();
+        while(m>=0) {
+            if(n-coins[m]>=0 && dpArr[m][n]-1==dpArr[m][n-coins[m]]) {
+                result.add(coins[m]);
+                n = n-coins[m];
+            } else if(m-1 >=0 && dpArr[m][n] == dpArr[m-1][n]) {
+                m--;
+            }
+            if(m==0 && n==1) {
+                result.add(coins[m]);
+                break;
+            }
+        }
+        return result;
+
     }
 }
