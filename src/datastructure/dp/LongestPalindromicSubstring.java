@@ -6,6 +6,7 @@ public class LongestPalindromicSubstring {
         String str = "aaaabbaa";
         System.out.println(LPS(str));
         System.out.println(LPSEfficient(str));
+        System.out.println(LPSNewApproach(str));
     }
 
     //Time complexity: o(n^2) and space complexity: o(n^2)
@@ -29,7 +30,7 @@ public class LongestPalindromicSubstring {
         }
 
         for(int k=3;k<=n;k++) {
-            for (int i = 0; i <= n - k; i++) {
+            for (int i = 0; i + k <= n; i++) {
                 j = i + k - 1;
                 if (str.charAt(i) == str.charAt(j) && arr[i + 1][j - 1]) {
                     arr[i][j] = true;
@@ -81,5 +82,37 @@ public class LongestPalindromicSubstring {
             }
         }
         return str.substring(start,start+maxLength);
+    }
+
+    static String LPSNewApproach(String s) {
+        int n = s.length();
+        boolean [][] dpArr= new boolean[n][n];
+        int start = -1;
+        int maxLength = 1;
+        for(int i=0;i<n;i++) {
+            dpArr[i][i]= true;
+            start =i;
+        }
+
+
+        for(int k=0;k<=n-2;k++) {
+            for(int i=0,j=i+k+1;j<n;j++,i++)
+            {
+                if(s.charAt(i)==s.charAt(j)) {
+                    if(j-i==1) {
+                        dpArr[i][j]=true;
+                        maxLength =2;
+                        start =i;
+                    } else if (dpArr[i+1][j-1]) {
+                        dpArr[i][j]=true;
+                        if(j-i+1>maxLength) {
+                            maxLength = j-i+1;
+                            start =i;
+                        }
+                    }
+                }
+            }
+        }
+        return s.substring(start,start+maxLength);
     }
 }
