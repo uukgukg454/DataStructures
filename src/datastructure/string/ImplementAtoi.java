@@ -17,7 +17,7 @@ public class ImplementAtoi {
                 result = result * -1;
                 break;
             }
-            int v = x - 48;
+            int v = x - '0';
             if (v < 0 || v > 9) {
                 result = -1;
                 break;
