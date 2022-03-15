@@ -9,7 +9,7 @@ public class MajorityElement {
         System.out.println(isMajority(arr, n, candidate));
     }
 
-    static int findCandidate(int arr[], int size)
+    static int findCandidate(int[] arr, int size)
     {
         int majorityElementIndex =0;
         int majorityElementCount =1;

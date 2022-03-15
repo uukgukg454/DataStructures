@@ -22,8 +22,8 @@ public class HeapOperation {
 
 class Heap {
     private int size;
-    private int maxSize;
-    private int[] heap;
+    private final int maxSize;
+    private final int[] heap;
 
     public Heap(int capacity) {
         this.size=0;
