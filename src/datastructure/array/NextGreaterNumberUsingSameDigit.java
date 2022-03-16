@@ -3,7 +3,7 @@ package datastructure.array;
 public class NextGreaterNumberUsingSameDigit {
 
     public static void main(String[] args) {
-        int n = 457894;
+        int n = 218765;
         System.out.println("next greater number using same digits is:"+findNextGreaterElement(n));
     }
     private static int findNextGreaterElement(int n) {
