@@ -195,7 +195,7 @@ public class TreeTraversal {
         Stack<TreeNode> s1= new Stack<TreeNode>();
         Stack<TreeNode> s2= new Stack<TreeNode>();
         s1.push(root);
-        while(!s1.isEmpty() || !s2.isEmpty())
+        while(!s1.isEmpty())
         {
             while(!s1.isEmpty())
             {
