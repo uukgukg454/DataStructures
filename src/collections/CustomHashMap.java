@@ -1,7 +1,5 @@
 package collections;
 
-import java.util.LinkedHashMap;
-
 public class CustomHashMap<K,V> {
 
     public static final int DEFAULT_CAPACITY = 16;
@@ -16,7 +14,7 @@ public class CustomHashMap<K,V> {
 
     public CustomHashMap(int capacity) {
         this.capacity= capacity;
-        arr = new Entry[capacity];
+        this.arr = new Entry[capacity];
     }
 
     static class Entry<K,V> {

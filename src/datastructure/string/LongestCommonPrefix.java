@@ -7,7 +7,7 @@ public class LongestCommonPrefix {
         System.out.println(longestCommonPrefix(arr,arr.length));
     }
 
-    static String longestCommonPrefix(String arr[], int n){
+    static String longestCommonPrefix(String[] arr, int n){
         String prefix = arr[0];
         for(int i=1;i<n;i++) {
             prefix = CommonPrefixUtil(prefix,arr[i]);

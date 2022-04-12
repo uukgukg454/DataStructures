@@ -13,7 +13,7 @@ public class LongestValidParentheses {
         if(s.isEmpty())
             return 0;
         int maxCount=0;
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         stack.push(-1);
         for(int i=0;i<s.length();i++)
         {
