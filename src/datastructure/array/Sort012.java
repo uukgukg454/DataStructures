@@ -44,7 +44,7 @@ public class Sort012 {
         }
     }
 
-    public static void sort021(int a[], int n)
+    public static void sort021(int[] a, int n)
     {
         int low =0;
         int mid =0;

@@ -2,11 +2,13 @@ package datastructure.graph;
 
 public class NoOfIslands {
     public static void main(String[] args) {
-        int[][] ocean = {{1, 1, 0, 0, 0},
-                {0, 1, 0, 0, 1},
-                {1, 0, 0, 1, 1},
-                {0, 0, 0, 0, 0},
-                {1, 0, 1, 0, 1}};
+        int[][] ocean = {
+                        {1, 1, 0, 0, 0},
+                        {0, 1, 0, 0, 1},
+                        {1, 0, 0, 1, 1},
+                        {0, 0, 0, 0, 0},
+                        {1, 0, 1, 0, 1}
+        };
         int m = ocean.length;
         int n = ocean[0].length;
         int count =0;
