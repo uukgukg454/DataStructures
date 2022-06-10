@@ -20,6 +20,13 @@ public class LongestPalindromicSubstring {
         for(int i=0;i<n-1;i++)
             arr[i][i]=true;
 
+        for(int i1=0;i1<n;i1++) {
+            for(int j1=0;j1<n;j1++) {
+                System.out.print(arr[i1][j1]+" ");
+            }
+            System.out.println();
+        }
+
         for(int i=0;i<n-1;i++) {
             j= i+1;
             if(str.charAt(i)==str.charAt(j)) {

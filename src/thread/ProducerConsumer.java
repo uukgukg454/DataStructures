@@ -10,7 +10,7 @@ public class ProducerConsumer {
     private static final int capacity = 4;
 
     private void produce() throws InterruptedException {
-        int value = 0;
+        //int value = 0;
             while (true) {
                 System.out.println(Thread.currentThread().getName()+"--->producer trying to acquire lock");
                 synchronized (this) {
@@ -20,8 +20,8 @@ public class ProducerConsumer {
                         wait();
                         System.out.println(Thread.currentThread().getName()+"----->producer resumed........");
                     }
-                    System.out.println(Thread.currentThread().getName()+"---->producing message::" + value);
-                    list.add(value++);
+                    //System.out.println(Thread.currentThread().getName()+"---->producing message::" + value);
+                    list.add(new Random().nextInt(5));
                     notify();
                     Thread.sleep(1000);
             }

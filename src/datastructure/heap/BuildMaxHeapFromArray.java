@@ -1,5 +1,7 @@
 package datastructure.heap;
 
+import java.util.LinkedHashSet;
+
 public class BuildMaxHeapFromArray {
 
     public static void main(String [] args) {
@@ -8,6 +10,7 @@ public class BuildMaxHeapFromArray {
         for(int i: arr) {
             System.out.print(i+" ");
         }
+
     }
 
     static void build(int [] arr) {

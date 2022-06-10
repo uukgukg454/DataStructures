@@ -2,7 +2,7 @@ package datastructure.array;
 
 /**
  * buy once and sell once
- * need to find out max difference such that larger eleemnts comes after smaller element
+ * need to find out max difference such that larger elements comes after smaller element
  */
 public class StockBuyOnceSellOnceProblem {
 

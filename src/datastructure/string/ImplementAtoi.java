@@ -53,6 +53,9 @@ public class ImplementAtoi {
                 result = (10*result) + v;
             }
         }
+
+        long l=0L;
+
         return result*flag;
 
     }
